@@ -1,3 +1,19 @@
 <% @articles.each do |article| %>
   <div><%= article.title %></div>
 <% end %>
+
+
+<br>
+
+
+<% @articles.each do |article| %>
+<div> <%= link_to article.title, article_path(article) %> | <%= article.description %></div>
+
+<% end %>
+
+<br>
+
+<% @articles.each do |article| %>
+| <%= article.description %>
+
+<% end %>
